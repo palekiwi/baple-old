@@ -107,6 +107,12 @@ const Menu: React.SFC<Props> = ({ items, lang, isOpen, setLang, toggle, logo }) 
 
       <LangSettings>
         <LangToggle
+          onClick={() => {setLang('es')}}
+          lang={'es'}
+          to={'/'}>
+          Espanol
+        </LangToggle>
+        <LangToggle
           onClick={() => {setLang('en')}}
           lang={'en'}
           to={'/'}>

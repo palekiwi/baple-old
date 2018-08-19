@@ -110,6 +110,14 @@ export const query = graphql`
         to
         label
       }
+      es {
+        to
+        label
+      }
+      zh {
+        to
+        label
+      }
     }
     logo: imageSharp(id: {regex: "/logos\/baple-group.png/"}) {
       resolutions(quality: 100) {
