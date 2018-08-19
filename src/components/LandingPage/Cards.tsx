@@ -1,87 +1,122 @@
 import * as React from 'react';
 import styled from "styled-components";
-import { colors, heights } from '../../styles/constants';
+import { device, colors, heights } from '../../styles/constants';
 
-import Container from '../Container';
+import fontawesome from '@fortawesome/fontawesome';
+import * as FontAwesomeIcon from '@fortawesome/react-fontawesome'
+
+import ContainerFluid from '../ContainerFluid';
 import Img from 'gatsby-image';
-import Card from './Card';
+import Link from '../../components/Link';
 
-const StyledLanding = styled.div`
-  position: relative;
-  height: calc(100vh - ${heights.header}px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: linear-gradient(120deg,
-    hsla(230,5%,40%,0.9),
-    hsla(200,5%,40%,1)
-  );
-`
+const tileBorder = `1px solid rgba(255,255,255,0.1)`;
+const color = 'white';
 
-const HeaderImg = styled.div`
+const ImageWrapper = styled.div`
+  z-index: -1;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: -1;
 `
 
 const Image = styled(Img)`
-  height: calc(100vh - ${heights.header}px);
+  width: 100%;
+  height: 500px;
   & > img {
     object-fit: cover !important;
     object-position: 0% 100% !important;
   }
 `
 
-const Content = styled(Container)`
-  width: 100%;
-  flex-direction: column;
-  padding: 0 1em;
-`
-
-const Heading = styled.h1`
-  text-align: center;
+const Title = styled.h3`
+  color: ${color};
   text-transform: uppercase;
-  color: white;
-  margin-bottom: 2em;
+  letter-spacing: 1.5px;
 `
 
-const Cards = styled.div`
+const StyledTile = styled(Link)`
+  cursor: pointer;
+  height: calc(25vh - 16px);
+  @media ${device.tablet} {
+    height: calc(50vh - 32px);
+  }
+  position: relative;
+  border-top: ${tileBorder};
+  color: rgba(255,255,255,0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 100%;
+  &:first-child {
+    border-top: none;
+  }
+  overflow: hidden;
+  transition: .2s ease-in-out;
+  &:hover {
+    background: rgba(0,0,0,0.6);
+    color: rgba(255,255,255,1);
+  }
+  @media ${device.tablet} {
+    flex-basis: 50%;
+    &:nth-child(odd) {
+      border-right: ${tileBorder};
+    }
+    &:nth-child(2) {
+      border-top: none;
+    }
+  }
+`
+
+const Tile: React.SFC<Tile> = ({ lang, to, label, img }) => (
+  <StyledTile to={to} lang={lang}>
+    <ImageWrapper><Image sizes={img.sizes}/></ImageWrapper>
+    <Title>{label}</Title>
+  </StyledTile>
+);
+
+const StyledLanding = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`
+
+const Tiles = styled.div`
+  width: 100%;
   display: flex;
   flex-flow: row wrap;
-  margin: 0 auto;
-  justify-content: center;
-  align-content: space-between;
+  background: linear-gradient(120deg,
+    hsla(230,5%,40%,0.3),
+    hsla(200,5%,40%,0.8)
+  );
 `
 
 const initialState = {};
 type State = Readonly<typeof initialState>;
 
-interface Props {
-  headerOne: any
-}
-
-class LandingPage extends React.Component<Props, State> {
+class LandingPage extends React.Component<LandingPageProps, State> {
   state = initialState
 
   render () {
     return (
       <StyledLanding>
-        <HeaderImg>
-          <Image sizes={this.props.headerOne.sizes}/>
-        </HeaderImg>
-        <Content>
-          <Heading>
-            Heading
-          </Heading>
-          <Cards>
-            {
-              ['Microgrids', 'Power SCADA', 'Flood Control', 'Service D', 'Service E'].map((el, i) =>
-              <Card key={i} title={el}/>
+
+        <ContainerFluid>
+          <Tiles>
+            { this.props.sections.map((el, i) =>
+              <Tile
+                key={i}
+                label={el.label}
+                to={el.to}
+                img={el.img.childImageSharp}
+                lang={this.props.lang}
+              />
             )}
-          </Cards>
-        </Content>
+          </Tiles>
+        </ContainerFluid>
+
       </StyledLanding>
     );
   }

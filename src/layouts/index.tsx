@@ -17,6 +17,7 @@ import Header from '../components/layout/Header';
 
 interface State {
   lang: Lang
+  navigation: Array<any>
   lock: boolean
 };
 
@@ -43,7 +44,7 @@ interface Props {
 }
 
 class Layout extends React.Component<Props, State> {
-  state: State = {lang: 'en', lock: false}
+  state: State = {lang: 'en', lock: false, navigation: []}
 
   componentDidMount () {
     const pref = this.props.location.pathname.substr(1,2);
@@ -53,6 +54,22 @@ class Layout extends React.Component<Props, State> {
       this.setState({lang: 'zh'});
     } else {
       this.setState({lang: locale.getLocale()});
+    }
+    const d = this.props.location.pathname.split('/')[2] || 'root';
+    // set navigation items dynamically
+    const navigation = this.props.data.pagesYaml.navigation[this.state.lang]
+      .find((x:any) => x.page == d).items;
+    this.setState({navigation});
+  }
+
+  componentDidUpdate (prevProps:any) {
+    // update navigation items dynamically
+    const d = this.props.location.pathname.split('/')[2];
+    if (prevProps.location.pathname.split('/')[2] !== d) {
+      const page = d || 'root';
+      const nav = this.props.data.pagesYaml.navigation[this.state.lang];
+      const navigation = nav.find((x:any) => x.page == page).items;
+      this.setState({navigation});
     }
   }
 
@@ -74,7 +91,7 @@ class Layout extends React.Component<Props, State> {
           <Helmet
             title={data.site.siteMetadata.title[this.state.lang]}
             meta={[
-              {name: 'description', content: 'Controlnet International Site'},
+              {name: 'description', content: 'Baple Group'},
             ]}
           />
           <Header
@@ -83,7 +100,7 @@ class Layout extends React.Component<Props, State> {
             lang={this.state.lang}
             title={this.props.data.site.siteMetadata.title}
             logo={this.props.data.logo}
-            items={this.props.data.pagesYaml.navigation[this.state.lang]}
+            items={this.state.navigation}
           />
           <LayoutMain>
             {children({...this.props, ...this.state})}
@@ -110,16 +127,11 @@ export const query = graphql`
     pagesYaml(id: {regex: "/navigation/"}) {
       navigation {
         en {
-          to
-          label
-        }
-        es {
-          to
-          label
-        }
-        zh {
-          to
-          label
+          page
+          items {
+            to
+            label
+          }
         }
       }
     }

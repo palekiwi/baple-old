@@ -1,3 +1,3 @@
-import Tiles from './Tiles';
+import Cards from './Cards';
 
-export default Tiles;
+export default Cards;
