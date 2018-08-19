@@ -1,6 +1,7 @@
 declare interface LandingPageProps {
   sections: Array<Tile>
   lang: Lang
+  background?: any
 }
 
 declare interface Tile {

@@ -5,28 +5,15 @@ import { device, colors, heights } from '../../styles/constants';
 import fontawesome from '@fortawesome/fontawesome';
 import * as FontAwesomeIcon from '@fortawesome/react-fontawesome'
 
-import ContainerFluid from '../ContainerFluid';
+import Container from '../Container';
 import Img from 'gatsby-image';
 import Link from '../../components/Link';
 
 const tileBorder = `1px solid rgba(255,255,255,0.1)`;
 const color = 'white';
 
-const ImageWrapper = styled.div`
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-`
-
 const Image = styled(Img)`
-  width: 100%;
-  height: 500px;
-  & > img {
-    object-fit: cover !important;
-    object-position: 0% 100% !important;
-  }
+  width: 80px;
 `
 
 const Title = styled.h3`
@@ -36,61 +23,59 @@ const Title = styled.h3`
 `
 
 const StyledTile = styled(Link)`
+  margin: 1%;
+  padding: 1em;
   cursor: pointer;
-  height: calc(25vh - 16px);
-  @media ${device.tablet} {
-    height: calc(50vh - 32px);
-  }
   position: relative;
-  border-top: ${tileBorder};
-  color: rgba(255,255,255,0.3);
+  border-radius: 4px;
+  background: rgba(255,255,255,0.9);
   display: flex;
+  flex-basis: 30%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-basis: 100%;
-  &:first-child {
-    border-top: none;
-  }
   overflow: hidden;
-  transition: .2s ease-in-out;
-  &:hover {
-    background: rgba(0,0,0,0.6);
-    color: rgba(255,255,255,1);
-  }
   @media ${device.tablet} {
-    flex-basis: 50%;
-    &:nth-child(odd) {
-      border-right: ${tileBorder};
-    }
-    &:nth-child(2) {
-      border-top: none;
-    }
   }
 `
 
 const Tile: React.SFC<Tile> = ({ lang, to, label, img }) => (
   <StyledTile to={to} lang={lang}>
-    <ImageWrapper><Image sizes={img.sizes}/></ImageWrapper>
-    <Title>{label}</Title>
+    <Image sizes={img.sizes}/>
   </StyledTile>
 );
 
 const StyledLanding = styled.div`
   position: relative;
+  background: black;
+  min-height: calc(100vh - 64px);
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
+`
+const Background = styled.div`
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  overflow: hidden;
+`
+const Overlay = styled.div`
+  background: rgba(0,0,0,0.8);
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
 `
 
 const Tiles = styled.div`
-  width: 100%;
   display: flex;
   flex-flow: row wrap;
-  background: linear-gradient(120deg,
-    hsla(230,5%,40%,0.3),
-    hsla(200,5%,40%,0.8)
-  );
+  margin: 0 auto;
+  width: 80%;
+  justify-content: center;
 `
 
 const initialState = {};
@@ -100,22 +85,26 @@ class LandingPage extends React.Component<LandingPageProps, State> {
   state = initialState
 
   render () {
+    console.log(this.props.background);
     return (
       <StyledLanding>
 
-        <ContainerFluid>
-          <Tiles>
-            { this.props.sections.map((el, i) =>
-              <Tile
-                key={i}
-                label={el.label}
-                to={el.to}
-                img={el.img.childImageSharp}
-                lang={this.props.lang}
-              />
-            )}
-          </Tiles>
-        </ContainerFluid>
+        <Background>
+          <Img sizes={this.props.background.sizes} />
+          <Overlay />
+        </Background>
+
+        <Tiles>
+          { this.props.sections.map((el, i) =>
+            <Tile
+              key={i}
+              label={el.label}
+              to={el.to}
+              img={el.img.childImageSharp}
+              lang={this.props.lang}
+            />
+          )}
+        </Tiles>
 
       </StyledLanding>
     );

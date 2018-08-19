@@ -19,7 +19,7 @@ class IndexPage extends React.Component<Props, {}> {
   render () {
     const data = this.props.data;
     return (
-      <div>Baple Wines</div>
+      <div>Baple Plastics</div>
     );
   }
 }

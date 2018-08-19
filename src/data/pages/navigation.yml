@@ -26,9 +26,8 @@ navigation:
         -
           - to: /plastic
             label: Baple Plastics
-        -
-          - to: /plastic/about
-            label: About Baple Plastics
+          - to: /plastic/pulverizers
+            label: Pulverizers
     - page: energy 
       items:
         -
