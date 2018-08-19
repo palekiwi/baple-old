@@ -36,7 +36,9 @@ interface Props {
       }
     }
     logo: any
-    navigation: any
+    pagesYaml: {
+      navigation: any
+    }
   }
 }
 
@@ -81,7 +83,7 @@ class Layout extends React.Component<Props, State> {
             lang={this.state.lang}
             title={this.props.data.site.siteMetadata.title}
             logo={this.props.data.logo}
-            items={this.props.data.navigation[this.state.lang]}
+            items={this.props.data.pagesYaml.navigation[this.state.lang]}
           />
           <LayoutMain>
             {children({...this.props, ...this.state})}
@@ -105,18 +107,20 @@ export const query = graphql`
         }
       }
     }
-    navigation: pagesYaml(id: {regex: "/navigation/"}) {
-      en {
-        to
-        label
-      }
-      es {
-        to
-        label
-      }
-      zh {
-        to
-        label
+    pagesYaml(id: {regex: "/navigation/"}) {
+      navigation {
+        en {
+          to
+          label
+        }
+        es {
+          to
+          label
+        }
+        zh {
+          to
+          label
+        }
       }
     }
     logo: imageSharp(id: {regex: "/logos\/baple-group.png/"}) {

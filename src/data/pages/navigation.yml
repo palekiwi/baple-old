@@ -1,45 +1,46 @@
-en:
-  -
-    - to: /wines
-      label: Wines
-    - to: /plastic
-      label: Plastics
-    - to: /metal-packaging
-      label: Metal Packaging
-    - to: /energy
-      label: Energy
-    - to: /consulting
-      label: Consulting
-  -
-    - to: /about
-      label: Baple Group
-es:
-  -
-    - to: /wines
-      label: Vinos
-    - to: /plastic
-      label: Plasticos
-    - to: /metal-packaging
-      label: Metalos
-    - to: /energy
-      label: Energia
-    - to: /consulting
-      label: Consulting
-  -
-    - to: /about
-      label: Baple Group
-zh:
-  -
-    - to: /wines
-      label: 葡萄酒
-    - to: /plastic
-      label: 塑膠產品
-    - to: /metal-packaging
-      label: 金屬包裝
-    - to: /energy
-      label: 能源
-    - to: /consulting
-      label: 諮詢
-  -
-    - to: /about
-      label: 關於Baple團體
+navigation:
+  en:
+    -
+      - to: /wines
+        label: Wines
+      - to: /plastic
+        label: Plastics
+      - to: /metal-packaging
+        label: Metal Packaging
+      - to: /energy
+        label: Energy
+      - to: /consulting
+        label: Consulting
+    -
+      - to: /about
+        label: Baple Group
+  es:
+    -
+      - to: /wines
+        label: Vinos
+      - to: /plastic
+        label: Plasticos
+      - to: /metal-packaging
+        label: Metalos
+      - to: /energy
+        label: Energia
+      - to: /consulting
+        label: Consulting
+    -
+      - to: /about
+        label: Baple Group
+  zh:
+    -
+      - to: /wines
+        label: 葡萄酒
+      - to: /plastic
+        label: 塑膠產品
+      - to: /metal-packaging
+        label: 金屬包裝
+      - to: /energy
+        label: 能源
+      - to: /consulting
+        label: 諮詢
+    -
+      - to: /about
+        label: 關於Baple團體

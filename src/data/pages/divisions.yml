@@ -1,0 +1,17 @@
+divisions:
+  en:
+    - to: /wines 
+      label: Wines
+      img: "../img/logos/baple-wines.png"
+    - to: /plastic 
+      label: Plastics
+      img: "../img/logos/baple-plastics.png"
+    - to: /energy 
+      label: Energy
+      img: "../img/logos/baple-energy.png"
+    - to: /metal-packaging 
+      label: Metal Packaging
+      img: "../img/logos/baple-metal-packaging.png"
+    - to: /consulting 
+      label: Consulting
+      img: "../img/logos/baple-consulting.png"

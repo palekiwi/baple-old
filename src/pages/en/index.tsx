@@ -11,6 +11,9 @@ interface Props {
         defLang: string
       }
     }
+    pagesYaml: {
+      divisions: any
+    }
   }
 }
 
@@ -18,7 +21,10 @@ class IndexPage extends React.Component<Props, {}> {
   render () {
     const data = this.props.data;
     return (
-      <div>Baple English</div>
+      <LandingPage
+        sections={this.props.data.pagesYaml.divisions.en}
+        lang={'en'}
+      />
     );
   }
 }
@@ -31,6 +37,21 @@ export const query = graphql`
       siteMetadata {
         defLang
       }
+    }
+    pagesYaml(id: {regex: "/divisions/"}) {
+     divisions {
+      en {
+        label
+        to
+        img  {
+          childImageSharp {
+            sizes(maxWidth: 400) {
+              ...GatsbyImageSharpSizes
+            }
+          }
+        }
+      }
+     }
     }
   }
 `;
