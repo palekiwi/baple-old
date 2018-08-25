@@ -5,12 +5,11 @@ import TitleSplit from '../TitleSplit';
 import TitleImage from '../TitleImage';
 import Hero from '../Hero';
 import Features from '../Features';
+import Half from '../sections/Half';
 
 interface Props {
   lang: Lang
-  data: {
-    pagesYaml: any
-  }
+  sections: any
 }
 
 type ElProps = any
@@ -31,12 +30,18 @@ const El: React.SFC<ElProps> = (props) => {
 
     case 'hero':
       return <Hero {...props}/>
+
+    case 'half':
+      return <Half {...props}/>
+
+    default:
+      return <div>Unknown section</div>
   }
 };
 
 const SimplePage: React.SFC<Props> = (props) => (
   <div>
-    {props.data.pagesYaml.sections.map((s:any,i:number) =>
+    {props.sections.map((s:any,i:number) =>
       <El {...s}/>
     )}
   </div>

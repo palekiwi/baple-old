@@ -1,4 +1,5 @@
 import * as React from 'react';
+import SimplePage from '../../../components/pages/SimplePage';
 
 interface Props {
   lang: Lang
@@ -19,7 +20,7 @@ class IndexPage extends React.Component<Props, {}> {
   render () {
     const data = this.props.data;
     return (
-      <div>Baple Plastics</div>
+      <SimplePage lang={"en"} sections={data.plasticYaml.sections}/>
     );
   }
 }
@@ -35,7 +36,9 @@ export const query = graphql`
     }
     plasticYaml(id: {regex: "/index-en/"}) {
       sections {
+        format
         title
+        paragraphs
         img {
           childImageSharp {
             sizes(maxWidth: 600) {
