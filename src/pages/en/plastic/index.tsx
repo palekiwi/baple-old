@@ -40,7 +40,8 @@ export const query = graphql`
     plasticYaml(id: {regex: "/index-en/"}) {
       welcome {
         title
-        text
+        subtitle1
+        subtitle2
         img {
           childImageSharp {
             sizes(maxWidth: 600) {
