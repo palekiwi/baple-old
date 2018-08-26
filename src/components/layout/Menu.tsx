@@ -13,6 +13,7 @@ interface Props {
   setLang: setLang
   toggle: () => void
   logo: any
+  home: string
   items: any
 }
 
@@ -81,16 +82,16 @@ const LangToggle = styled(Link)`
   font-size: 0.8em;
 `
 
-const Menu: React.SFC<Props> = ({ items, lang, isOpen, setLang, toggle, logo }) => (
+const Menu: React.SFC<Props> = ({ items, lang, isOpen, setLang, toggle, logo, home }) => (
   <Fade duration={{enter: 0, exit: 300}} inProp={isOpen}>
     <StyledMenu>
-      <Link onClick={() => toggle()} to={'/'} lang={lang}>
-        <Logo src={logo.resolutions.src}/>
+      <Link onClick={() => toggle()} to={home} lang={lang}>
+        {logo && <Logo src={logo.childImageSharp.sizes.src}/>}
       </Link>
 
       <Links>
-        {items.map((xs:any) =>
-          <Pages>
+        {items.map((xs:any, i:number) =>
+          <Pages key={i}>
             {
             xs.map((x:any) =>
               <NavLink key={x.label}

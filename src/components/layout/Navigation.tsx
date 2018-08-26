@@ -11,6 +11,7 @@ interface Props {
   setLang: setLang
   toggleLock: (b: boolean) => void
   logo: any
+  home: string
   items: any
 }
 
@@ -34,6 +35,7 @@ class Navigation extends React.Component<Props, State> {
         />
         <Menu
           logo={this.props.logo}
+          home={this.props.home}
           isOpen={this.state.isOpen}
           lang={this.props.lang}
           setLang={this.props.setLang}

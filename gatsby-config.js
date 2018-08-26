@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: {
-      en: 'Baple English',
-      es: 'Baple Espanyol',
-      zh: 'Baple Chinese'
+      en: 'Baple',
+      es: 'Baple',
+      zh: 'Baple'
     },
     defLang: 'en',
   },

@@ -17,8 +17,13 @@ import Header from '../components/layout/Header';
 
 interface State {
   lang: Lang
-  navigation: Array<any>
   lock: boolean
+  navigation: {
+    title: string
+    logo: any
+    home: string
+    items: Array<any>
+  }
 };
 
 interface Props {
@@ -36,7 +41,6 @@ interface Props {
         }
       }
     }
-    logo: any
     pagesYaml: {
       navigation: any
     }
@@ -44,7 +48,16 @@ interface Props {
 }
 
 class Layout extends React.Component<Props, State> {
-  state: State = {lang: 'en', lock: false, navigation: []}
+  state: State = {
+    lang: 'en',
+    lock: false,
+    navigation: {
+      items: [],
+      title: 'Baple',
+      logo: null,
+      home: '/'
+    }
+  }
 
   componentDidMount () {
     const pref = this.props.location.pathname.substr(1,2);
@@ -56,9 +69,9 @@ class Layout extends React.Component<Props, State> {
       this.setState({lang: locale.getLocale()});
     }
     const d = this.props.location.pathname.split('/')[2] || 'root';
-    // set navigation items dynamically
-    const navigation = this.props.data.pagesYaml.navigation[this.state.lang]
-      .find((x:any) => x.page == d).items;
+    // set navigation object dynamically
+    const nav = this.props.data.pagesYaml.navigation[this.state.lang];
+    const navigation = nav.find((x:any) => x.page == d) || nav.find((x:any) => x.page == 'root');
     this.setState({navigation});
   }
 
@@ -68,7 +81,7 @@ class Layout extends React.Component<Props, State> {
     if (prevProps.location.pathname.split('/')[2] !== d) {
       const page = d || 'root';
       const nav = this.props.data.pagesYaml.navigation[this.state.lang];
-      const navigation = nav.find((x:any) => x.page == page).items;
+      const navigation = nav.find((x:any) => x.page == d) || nav.find((x:any) => x.page == 'root');
       this.setState({navigation});
     }
   }
@@ -79,17 +92,17 @@ class Layout extends React.Component<Props, State> {
   }
 
   private toggleLock = (b: boolean) => {
-    console.log('toggling', b);
     this.setState({lock: b});
   }
 
   render () {
+    console.log(this.state.navigation);
     const {children, data, location} = this.props;
     return (
       <ThemeProvider theme={theme}>
         <LayoutRoot lock={this.state.lock}>
           <Helmet
-            title={data.site.siteMetadata.title[this.state.lang]}
+            title={this.state.navigation.title}
             meta={[
               {name: 'description', content: 'Baple Group'},
             ]}
@@ -98,9 +111,10 @@ class Layout extends React.Component<Props, State> {
             toggleLock={this.toggleLock}
             setLang={this.setLang}
             lang={this.state.lang}
-            title={this.props.data.site.siteMetadata.title}
-            logo={this.props.data.logo}
-            items={this.state.navigation}
+            title={this.state.navigation.title}
+            home={this.state.navigation.home}
+            logo={this.state.navigation.logo}
+            items={this.state.navigation.items}
           />
           <LayoutMain>
             {children({...this.props, ...this.state})}
@@ -128,16 +142,20 @@ export const query = graphql`
       navigation {
         en {
           page
+          home
+          title
+          logo {
+            childImageSharp {
+              sizes(maxWidth: 200) {
+                ...GatsbyImageSharpSizes
+              }
+            }
+          }
           items {
             to
             label
           }
         }
-      }
-    }
-    logo: imageSharp(id: {regex: "/logos\/baple-group.png/"}) {
-      resolutions(quality: 100) {
-        ...GatsbyImageSharpResolutions
       }
     }
   }

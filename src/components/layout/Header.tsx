@@ -54,25 +54,23 @@ const Brandname = styled.h4`
 interface Props {
   lang: Lang
   logo: any
-  title: {
-    es: string
-    en: string
-    zh: string
-  }
+  title: string
+  home: string
   setLang: setLang
   toggleLock: (b: boolean) => void
   items: any
 }
 
-const Header: React.SFC<Props> = ({setLang, lang, logo, title, toggleLock, items}) => (
+const Header: React.SFC<Props> = ({setLang, lang, logo, title, home, toggleLock, items}) => (
   <StyledHeader>
     <HeaderInner>
-      <Brand to={'/'} lang={lang}>
-        <Logo src={logo.resolutions.src}/>
-        <Brandname>{title[lang]}</Brandname>
+      <Brand to={home} lang={lang}>
+        {logo && <Logo src={logo.childImageSharp.sizes.src}/>}
+        <Brandname>{title}</Brandname>
       </Brand>
       <Navigation
         logo={logo}
+        home={home}
         toggleLock={toggleLock}
         setLang={setLang}
         lang={lang}

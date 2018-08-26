@@ -20,7 +20,6 @@ interface Props {
 class IndexPage extends React.Component<Props, {}> {
   render () {
     const data = this.props.data.plasticYaml;
-    console.log(data);
     return (
       <DivisionIndex lang={"en"}
         welcome={data.welcome}

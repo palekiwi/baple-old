@@ -24,7 +24,6 @@ const SubTitle = styled.h3`
 
 const UnderConstruction: React.SFC<Props> = ({ lang }) => (
   <Content>
-    <Image src={require('../../data/img/logos/baple-group.png')}/>
     <Title>Available soon.</Title>
     <SubTitle>This page is still under construction</SubTitle>
   </Content>
