@@ -2,38 +2,38 @@ sections:
   - format: half
     img: "./baple-plastic-welcome-page.jpg"
     title: Baple Plastic
-    text: 
+    paragraphs: 
       - "Because innovation sells packaging, and packaging sells products."
       - "Porque innovación vende packaging y packaging vende productos."
 
   - format: icons
     img: 
     title: Products
-    text: 
+    paragraphs: 
     items:
       - title: Pulverizadores
-        text:
+        paragraphs:
         img: "./icons/pulverizadores-logo.png"
       - title: Bombas de locion
-        text:
+        paragraphs:
         img: "./icons/bombas-de-locion-logo.png"
       - title: Micro pulverizadores
-        text:
+        paragraphs:
         img: "./icons/micropulverizadores-logo.png"
       - title: Tapon antigoteo
-        text:
+        paragraphs:
         img: "./icons/tapon-antigoteo-logo.png"
       - title: Tapon de plástico
-        text:
+        paragraphs:
         img: "./icons/tapones-de-plastico-logo.png "
       - title: Botes de plástico
-        text:
+        paragraphs:
         img: "./icons/botes-de-plastico-logo.png"
 
   - format: half
     img: "./baple-plastic-welcome-page.jpg"
     title: Baple Plastic Company
-    text: 
+    paragraphs: 
       - "Baple fue fundada en 2013 con una clara visión y misión.
     Visión: Ayudar a la Industria Española a ser un referente internacional.
 Misión: Ayudar a empresas locales suministrando soluciones para que aumenten su nivel de competitividad internacional."
@@ -46,10 +46,9 @@ Misión: Ayudar a empresas locales suministrando soluciones para que aumenten su
     items:
       - title: Innovacion y tecnología
       - title: Servicio personalizado
-      - title: Servicio personalizado
       - title: Baple TCS System
 
-    text: 
+    paragraphs: 
       - "Innovación y Tecnología es la base para poder suministrar productos con los niveles de calidad exigidos por el mercado internacional, ofreciendo soluciones cada vez más modernas y más personalizadas a nuestros partners."
       - "Debido a los múltiples centros de fabricación, tenemos la capacidad de ofrecer una gran flexibilidad en la personalización de productos y servicios adicionales que aporten valor añadido al consumidor."
   - format: half
@@ -58,12 +57,11 @@ Misión: Ayudar a empresas locales suministrando soluciones para que aumenten su
     items:
       - title: Innovacion y tecnología
       - title: Servicio personalizado
-      - title: Servicio personalizado
       - title: Baple TCS System
 
-    text: 
-    - "Baple Plastics dispone de un equipo de auditoria especializado cuya misión es inspecionar regularmente, auditar y certificar cada centro de producción."
+    paragraphs: 
+      - "Baple Plastics dispone de un equipo de auditoria especializado cuya misión es inspecionar regularmente, auditar y certificar cada centro de producción."
 
       - "Por lo consiguiente, cada producto de Baple Plastics no sólo cumple con nuestros estrictos estándares de calidad, además cumplen con los principales estándares internacionales de calidad, y que son garantizados en las fichas técnicas acordadas antes de cada proyecto."
 
-    - "Un buen sistema de control de calidad es sinónimo de buen trabajo."
+      - "Un buen sistema de control de calidad es sinónimo de buen trabajo."

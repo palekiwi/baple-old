@@ -1,5 +1,5 @@
 import * as React from 'react';
-import SimplePage from '../../../components/pages/SimplePage';
+import DivisionIndex from '../../../components/pages/DivisionIndex';
 
 interface Props {
   lang: Lang
@@ -11,16 +11,19 @@ interface Props {
       }
     }
     plasticYaml: {
-      sections: any
+      welcome: any
     }
   }
 }
 
 class IndexPage extends React.Component<Props, {}> {
   render () {
-    const data = this.props.data;
+    const data = this.props.data.plasticYaml;
+    console.log(data);
     return (
-      <SimplePage lang={"en"} sections={data.plasticYaml.sections}/>
+      <DivisionIndex lang={"en"}
+        welcome={data.welcome}
+      />
     );
   }
 }
@@ -35,13 +38,19 @@ export const query = graphql`
       }
     }
     plasticYaml(id: {regex: "/index-en/"}) {
-      sections {
-        format
+      welcome {
         title
-        paragraphs
+        text
         img {
           childImageSharp {
             sizes(maxWidth: 600) {
+              ...GatsbyImageSharpSizes
+            }
+          }
+        }
+        logo {
+          childImageSharp {
+            sizes(maxWidth: 200) {
               ...GatsbyImageSharpSizes
             }
           }

@@ -1,7 +1,7 @@
-sections:
-  - format: half
-    img: "../../img/plastic/baple-plastic-welcome-page.jpg"
-    title: Baple Plastic
-    paragraphs: 
-      - "Because innovation sells packaging, and packaging sells products."
-      - "Porque innovación vende packaging y packaging vende productos."
+welcome:
+  title: Baple Plastic
+  img: "./baple-plastic-welcome-page.jpg"
+  logo: "../../img/logos/baple-plastics.png"
+  text: |
+    Because innovation sells packaging, and packaging sells products.
+    Porque innovación vende packaging y packaging vende productos.
