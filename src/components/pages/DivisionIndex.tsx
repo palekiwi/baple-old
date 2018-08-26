@@ -11,8 +11,8 @@ interface Props {
 
 const DivisionIndex: React.SFC<Props> = ({ welcome, icons }) => (
   <div>
-    <ProductIcons content={icons} />
     <WelcomeDivision content={welcome} />
+    <ProductIcons content={icons} />
   </div>
 );
 

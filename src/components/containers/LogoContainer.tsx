@@ -1,4 +1,6 @@
 import * as React from 'react';
+import Link from 'gatsby-link';
+import { Logo, Image } from '../styled/LogoStyles';
 
 interface Props {
   title: string
@@ -7,9 +9,11 @@ interface Props {
 }
 
 const LogoContainer: React.SFC<Props> = ({ title, to, img }) => (
-  <div>
-    Logo
-  </div>
+  <Logo>
+    <Link to={to}>
+      <Image sizes={img.childImageSharp.sizes} />
+    </Link>
+  </Logo>
 );
 
 export default LogoContainer;

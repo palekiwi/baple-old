@@ -3,6 +3,8 @@ import Container from '../styled/Container';
 import TilesContainer from '../containers/TilesContainer';
 import LogoContainer from '../containers/LogoContainer';
 import { Logo } from '../styled/ImageStyles';
+import { Title2 } from '../styled/TitleStyles';
+import { Section } from '../styled/Section';
 
 interface Item {
   title: string
@@ -20,9 +22,14 @@ interface Props {
 
 const ProductIcons: React.SFC<Props> = ({ content }) => (
   <Container>
-    <TilesContainer>
-      {content.items.map((el, i) => <LogoContainer key={i} {...el}/>)}
-    </TilesContainer>
+    <Section>
+      <Title2>
+        {content.title}
+      </Title2>
+      <TilesContainer>
+        {content.items.map((el, i) => <LogoContainer key={i} {...el}/>)}
+      </TilesContainer>
+    </Section>
   </Container>
 );
 

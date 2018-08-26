@@ -5,6 +5,7 @@ export const Tiles = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: center;
 ` 
 
 export const Tile = styled.div`

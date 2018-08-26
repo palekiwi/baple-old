@@ -6,7 +6,7 @@ welcome:
   subtitle2: Porque innovación vende packaging y packaging vende productos.
 
 icons:
-  title: Products
+  title: Product Categories
   items:
     - title: Pulverizadores
       to: "/en/plastic/pulverizadores"
@@ -22,7 +22,7 @@ icons:
       img: "./icons/tapon-antigoteo-logo.png"
     - title: Tapon de plástico
       to: "/en/plastic/tapones-de-plastico"
-      img: "./icons/tapones-de-plastico-logo.png "
+      img: "./icons/tapones-de-plastico-logo.png"
     - title: Botes de plástico
       to: "/en/plastic/botes-de-plastico"
       img: "./icons/botes-de-plastico-logo.png"
