@@ -4,3 +4,25 @@ welcome:
   logo: "../../img/logos/baple-plastics.png"
   subtitle1: Because innovation sells packaging, and packaging sells products.
   subtitle2: Porque innovación vende packaging y packaging vende productos.
+
+icons:
+  title: Products
+  items:
+    - title: Pulverizadores
+      to: "/en/plastic/pulverizadores"
+      img: "./icons/pulverizadores-logo.png"
+    - title: Bombas de locion
+      to: "/en/plastic/bombas-de-locion"
+      img: "./icons/bombas-de-locion-logo.png"
+    - title: Micro pulverizadores
+      to: "/en/plastic/micro-pulverizadores"
+      img: "./icons/micropulverizadores-logo.png"
+    - title: Tapon antigoteo
+      to: "/en/plastic/tapon-antigoteo"
+      img: "./icons/tapon-antigoteo-logo.png"
+    - title: Tapon de plástico
+      to: "/en/plastic/tapones-de-plastico"
+      img: "./icons/tapones-de-plastico-logo.png "
+    - title: Botes de plástico
+      to: "/en/plastic/botes-de-plastico"
+      img: "./icons/botes-de-plastico-logo.png"

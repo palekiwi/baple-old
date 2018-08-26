@@ -1,20 +1,17 @@
 import * as React from 'react';
 import WelcomeDivision from '../structural/WelcomeDivision';
+import ProductIcons from '../structural/ProductIcons';
 
 interface Props {
   lang: Lang
-  welcome: {
-    title: string
-    img: any
-    subtitle1: string
-    subtitle2: string
-    logo: any
-  }
+  welcome: any
+  icons: any
 }
 
 
-const DivisionIndex: React.SFC<Props> = ({ welcome }) => (
+const DivisionIndex: React.SFC<Props> = ({ welcome, icons }) => (
   <div>
+    <ProductIcons content={icons} />
     <WelcomeDivision content={welcome} />
   </div>
 );

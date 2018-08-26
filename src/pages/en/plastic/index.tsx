@@ -12,6 +12,7 @@ interface Props {
     }
     plasticYaml: {
       welcome: any
+      icons: any
     }
   }
 }
@@ -23,6 +24,7 @@ class IndexPage extends React.Component<Props, {}> {
     return (
       <DivisionIndex lang={"en"}
         welcome={data.welcome}
+        icons={data.icons}
       />
     );
   }
@@ -38,6 +40,20 @@ export const query = graphql`
       }
     }
     plasticYaml(id: {regex: "/index-en/"}) {
+      icons {
+        title
+        items {
+          title
+          to
+          img {
+            childImageSharp {
+              sizes(maxWidth: 600) {
+                ...GatsbyImageSharpSizes
+              }
+            }
+          }
+        }
+      }
       welcome {
         title
         subtitle1
