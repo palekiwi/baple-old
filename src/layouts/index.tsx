@@ -4,26 +4,13 @@ import { ThemeProvider } from "styled-components";
 import { main as theme } from '../styles/themes';
 import { isRoot } from '../utils/helpers';
 
-import fontawesome from '@fortawesome/fontawesome';
-import * as FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import * as faCoffee from '@fortawesome/fontawesome-free-solid/faCoffee'
-
-fontawesome.library.add(faCoffee);
+import UnderConstruction from '../components/pages/UnderConstruction';
 
 import Helmet from 'react-helmet';
-import LayoutRoot from '../components/layout/LayoutRoot';
-import LayoutMain from '../components/layout/LayoutMain';
-import Header from '../components/layout/Header';
 
 interface State {
   lang: Lang
   lock: boolean
-  navigation: {
-    title: string
-    logo: any
-    home: string
-    items: Array<any>
-  }
 };
 
 interface Props {
@@ -41,6 +28,7 @@ interface Props {
         }
       }
     }
+    background: any
     pagesYaml: {
       navigation: any
     }
@@ -50,39 +38,19 @@ interface Props {
 class Layout extends React.Component<Props, State> {
   state: State = {
     lang: 'en',
-    lock: false,
-    navigation: {
-      items: [],
-      title: 'Baple',
-      logo: null,
-      home: '/'
-    }
+    lock: false
   }
 
   componentDidMount () {
     const pref = this.props.location.pathname.substr(1,2);
     if (pref == 'en') {
       this.setState({lang: 'en'});
+    } else if (pref == 'es') {
+      this.setState({lang: 'es'});
     } else if (pref == 'zh') {
       this.setState({lang: 'zh'});
     } else {
       this.setState({lang: locale.getLocale()});
-    }
-    const d = this.props.location.pathname.split('/')[2] || 'root';
-    // set navigation object dynamically
-    const nav = this.props.data.pagesYaml.navigation[this.state.lang];
-    const navigation = nav.find((x:any) => x.page == d) || nav.find((x:any) => x.page == 'root');
-    this.setState({navigation});
-  }
-
-  componentDidUpdate (prevProps:any) {
-    // update navigation items dynamically
-    const d = this.props.location.pathname.split('/')[2];
-    if (prevProps.location.pathname.split('/')[2] !== d) {
-      const page = d || 'root';
-      const nav = this.props.data.pagesYaml.navigation[this.state.lang];
-      const navigation = nav.find((x:any) => x.page == d) || nav.find((x:any) => x.page == 'root');
-      this.setState({navigation});
     }
   }
 
@@ -96,30 +64,23 @@ class Layout extends React.Component<Props, State> {
   }
 
   render () {
-    console.log(this.state.navigation);
     const {children, data, location} = this.props;
+    console.log(data.pagesYaml.navigation);
     return (
       <ThemeProvider theme={theme}>
-        <LayoutRoot lock={this.state.lock}>
+        <div>
           <Helmet
-            title={this.state.navigation.title}
+            title={data.site.siteMetadata.title[this.state.lang]}
             meta={[
               {name: 'description', content: 'Baple Group'},
             ]}
           />
-          <Header
-            toggleLock={this.toggleLock}
-            setLang={this.setLang}
+          <UnderConstruction
             lang={this.state.lang}
-            title={this.state.navigation.title}
-            home={this.state.navigation.home}
-            logo={this.state.navigation.logo}
-            items={this.state.navigation.items}
+            background={data.background}
+            logos={data.pagesYaml.navigation}
           />
-          <LayoutMain>
-            {children({...this.props, ...this.state})}
-          </LayoutMain>
-        </LayoutRoot>
+        </div>
       </ThemeProvider>
     );
   }
@@ -128,7 +89,7 @@ class Layout extends React.Component<Props, State> {
 export default Layout;
 
 export const query = graphql`
-  query LayoutQuery {
+  query LayoutQueryUC {
     site {
       siteMetadata {
         title {
@@ -138,12 +99,14 @@ export const query = graphql`
         }
       }
     }
+    background: imageSharp(id: {regex: "/welcome.jpg/"}) {
+      sizes(maxWidth: 1920, quality: 100) {
+        ...GatsbyImageSharpSizes
+      }
+    }
     pagesYaml(id: {regex: "/navigation/"}) {
       navigation {
         en {
-          page
-          home
-          title
           logo {
             childImageSharp {
               sizes(maxWidth: 200) {
@@ -151,9 +114,23 @@ export const query = graphql`
               }
             }
           }
-          items {
-            to
-            label
+        }
+        es {
+          logo {
+            childImageSharp {
+              sizes(maxWidth: 200) {
+                ...GatsbyImageSharpSizes
+              }
+            }
+          }
+        }
+        zh {
+          logo {
+            childImageSharp {
+              sizes(maxWidth: 200) {
+                ...GatsbyImageSharpSizes
+              }
+            }
           }
         }
       }

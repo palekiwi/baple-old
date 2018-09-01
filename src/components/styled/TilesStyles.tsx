@@ -6,12 +6,12 @@ export const Tiles = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-` 
+  justify-content: center;
+`
 
 export const Tile = styled.div`
-  flex: 1 1 auto;
   display: flex;
   & > div {
     flex: 1 0 auto;
   }
-` 
+`

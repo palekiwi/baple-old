@@ -9,7 +9,7 @@ export const Image = styled(Img)`
   @media ${device.tablet} {
     height: auto;
   }
-` 
+`
 
 export const ImageFH = styled(Img)`
   max-width: 100%;
@@ -17,7 +17,7 @@ export const ImageFH = styled(Img)`
   @media ${device.tablet} {
     min-height: calc(100vh - 64px);
   }
-` 
+`
 
 export const Logo = styled(Img)`
   margin: 0 auto;
