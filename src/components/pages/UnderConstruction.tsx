@@ -77,7 +77,7 @@ const UnderConstruction: React.SFC<Props> = ({ lang, background, logos }) => (
     <Section>
       <Title>{messages[lang]}</Title>
       <TilesContainer>
-        {logos[lang].map((el:any, i:any) =>
+        {logos[lang].filter((el:any) => el.logo).map((el:any, i:any) =>
           <LogoTile key={i}>
             <LogoTileImg sizes={el.logo.childImageSharp.sizes}/>
           </LogoTile>

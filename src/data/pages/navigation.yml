@@ -2,7 +2,7 @@ navigation:
   en:
     - page: root
       title: Baple Group
-      logo: '../img/logos/baple-group.png'
+      logo: ''
       home: '/'
       items:
         -
@@ -72,7 +72,7 @@ navigation:
 
     - page: consulting
       title: Baple Consulting
-      logo: '../img/logos/baple-consulting.png'
+      logo: ''
       home: '/consulting'
       items:
         -
