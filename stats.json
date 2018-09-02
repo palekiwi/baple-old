@@ -1,8 +1,8 @@
 {
   "assetsByChunkName": {
     "component---src-layouts-index-tsx": [
-      "component---src-layouts-index-tsx-3ebb71d51f06e5ebbc3f.js",
-      "component---src-layouts-index-tsx-3ebb71d51f06e5ebbc3f.js.map"
+      "component---src-layouts-index-tsx-41e0569936e939f54571.js",
+      "component---src-layouts-index-tsx-41e0569936e939f54571.js.map"
     ],
     "path---es-about": [
       "path---es-about-a0e39f21c11f6a62c5ab.js",
@@ -13,8 +13,8 @@
       "path---en-contact-a0e39f21c11f6a62c5ab.js.map"
     ],
     "path---": [
-      "path----75c46e30989d0ea10076.js",
-      "path----75c46e30989d0ea10076.js.map"
+      "path----0db4ba3324ef26edc72e.js",
+      "path----0db4ba3324ef26edc72e.js.map"
     ],
     "path---en-about": [
       "path---en-about-a0e39f21c11f6a62c5ab.js",
@@ -69,8 +69,8 @@
       "path---es-1377aeab2aca2430238b.js.map"
     ],
     "commons": [
-      "commons-9e6c5ee259685b2e8412.js",
-      "commons-9e6c5ee259685b2e8412.js.map"
+      "commons-34bb7f0f5c965c16f153.js",
+      "commons-34bb7f0f5c965c16f153.js.map"
     ],
     "component---src-pages-404-tsx": [
       "component---src-pages-404-tsx-c3f1179ef31e3033d235.js",
