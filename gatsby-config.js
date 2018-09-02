@@ -1,11 +1,12 @@
 module.exports = {
+  pathPrefix: `/baple`,
   siteMetadata: {
     title: {
       en: 'Baple',
       es: 'Baple',
       zh: 'Baple'
     },
-    defLang: 'en',
+    defLang: 'es',
     underConstruction: true
   },
   plugins: [

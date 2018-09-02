@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Img from 'gatsby-image';
+import { widths, device, heights } from '../../styles/constants';
 
 export const Page = styled.div`
   min-height: 100vh;
@@ -29,11 +30,24 @@ export const Overlay = styled.div`
 `
 
 export const Image = styled(Img)`
-  height: 100vh;
+  width: 100%;
+  height: auto;
+  @media ${device.tablet} {
+    height: 100vh;
+  }
 `
 
 export const Title = styled.h1`
   color: white;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 0.3em;
+`
+
+export const Subtitle = styled.h2`
+  color: white;
+  font-weight: 300;
   text-align: center;
   text-transform: uppercase;
 `

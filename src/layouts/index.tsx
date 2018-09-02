@@ -52,7 +52,7 @@ interface Props {
 
 class Layout extends React.Component<Props, State> {
   state: State = {
-    lang: 'en',
+    lang: 'es',
     lock: false,
     navigation: {
       items: [],

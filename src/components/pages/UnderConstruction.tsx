@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Container from '../styled/Container';
 import { Section } from '../styled/Section';
 import TilesContainer from '../containers/TilesContainer';
-import { Page, Background, Overlay, LogoTile, LogoTileImg, Image, Title } from '../styled/UnderConstructionStyles';
+import { Page, Background, Overlay, LogoTile, LogoTileImg, Image, Title, Subtitle } from '../styled/UnderConstructionStyles';
 
 interface Props {
   lang: Lang
@@ -12,9 +12,9 @@ interface Props {
 }
 
 const messages = {
-  en: 'Baple.es is coming soon!',
-  es: 'Baple.es en Espanol!',
-  zh: 'Baple.es 快來了!',
+  en: 'We\'re coming soon!',
+  es: 'Nos vemos pronto!',
+  zh: '我們快來了!',
 };
 
 const UnderConstruction: React.SFC<Props> = ({ lang, background, logos }) => (
@@ -24,7 +24,8 @@ const UnderConstruction: React.SFC<Props> = ({ lang, background, logos }) => (
       <Overlay/>
     </Background>
     <Section>
-      <Title>{messages[lang]}</Title>
+      <Title>Baple.es</Title>
+      <Subtitle>{messages[lang]}</Subtitle>
       <TilesContainer>
         {logos[lang].filter((el:any) => el.logo).map((el:any, i:any) =>
           <LogoTile key={i}>
