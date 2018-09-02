@@ -12,7 +12,7 @@ interface Props {
       }
     }
     pagesYaml: {
-      divisions: any
+      navigation: any
     }
     background: any
   }
@@ -24,7 +24,7 @@ class IndexPage extends React.Component<Props, {}> {
     console.log(this.props.data.background);
     return (
       <LandingPage
-        sections={this.props.data.pagesYaml.divisions.en}
+        sections={this.props.data.pagesYaml.navigation.en}
         background={this.props.data.background}
         lang={'en'}
       />
@@ -46,12 +46,12 @@ export const query = graphql`
         ...GatsbyImageSharpSizes
       }
     }
-    pagesYaml(id: {regex: "/divisions/"}) {
-     divisions {
+    pagesYaml(id: {regex: "/navigation.yml/"}) {
+     navigation {
       en {
-        label
-        to
-        img  {
+        title
+        home
+        logo  {
           childImageSharp {
             sizes(maxWidth: 400) {
               ...GatsbyImageSharpSizes

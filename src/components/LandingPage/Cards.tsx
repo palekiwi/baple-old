@@ -39,9 +39,9 @@ const StyledTile = styled(Link)`
   }
 `
 
-const Tile: React.SFC<Tile> = ({ lang, to, label, img }) => (
-  <StyledTile to={to} lang={lang}>
-    <Image sizes={img.sizes}/>
+const Tile: React.SFC<Tile> = ({ lang, home, label, logo }) => (
+  <StyledTile home={home} lang={lang}>
+    <Image sizes={logo.sizes}/>
   </StyledTile>
 );
 
@@ -99,8 +99,8 @@ class LandingPage extends React.Component<LandingPageProps, State> {
             <Tile
               key={i}
               label={el.label}
-              to={el.to}
-              img={el.img.childImageSharp}
+              home={el.home}
+              logo={el.logo.childImageSharp}
               lang={this.props.lang}
             />
           )}
