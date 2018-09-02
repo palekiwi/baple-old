@@ -47,7 +47,7 @@ export const Title = styled.h1`
 
 export const Subtitle = styled.h2`
   color: white;
-  font-weight: 300;
+  font-weight: 400;
   text-align: center;
   text-transform: uppercase;
 `
