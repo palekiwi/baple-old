@@ -55,11 +55,14 @@ export const Subtitle = styled.h2`
 export const LogoTile = styled.div`
   align-items: center;
   border: 1px solid white;
-  width: 150px;
+  width: 120px;
   padding: 0.5em;
   background: white;
   margin: 5px;
   border-radius: 4px;
+  @media ${device.tablet} {
+    width: 150px;
+  }
 `
 
 export const LogoTileImg = styled(Img)`
