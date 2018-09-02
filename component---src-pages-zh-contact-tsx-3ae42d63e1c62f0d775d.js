@@ -1,0 +1,2 @@
+webpackJsonp([0xc15c7feaa8a1],{244:function(e,t,r){"use strict";var a=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var r=arguments[t];for(var a in r)Object.prototype.hasOwnProperty.call(r,a)&&(e[a]=r[a])}return e};Object.defineProperty(t,"__esModule",{value:!0});var n=r(1),c=r(23),o=function(e){return n.createElement(c.default,a({},e))};t.default=o}});
+//# sourceMappingURL=component---src-pages-zh-contact-tsx-3ae42d63e1c62f0d775d.js.map

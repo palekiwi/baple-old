@@ -1,0 +1,136 @@
+{
+  "assetsByChunkName": {
+    "component---src-layouts-index-tsx": [
+      "component---src-layouts-index-tsx-0a256fcf6b4dfd085290.js",
+      "component---src-layouts-index-tsx-0a256fcf6b4dfd085290.js.map"
+    ],
+    "path---es-about": [
+      "path---es-about-a0e39f21c11f6a62c5ab.js",
+      "path---es-about-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---en-contact": [
+      "path---en-contact-a0e39f21c11f6a62c5ab.js",
+      "path---en-contact-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---": [
+      "path----770c506fe4fc931e9e04.js",
+      "path----770c506fe4fc931e9e04.js.map"
+    ],
+    "path---en-about": [
+      "path---en-about-a0e39f21c11f6a62c5ab.js",
+      "path---en-about-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "component---src-pages-en-index-tsx": [
+      "component---src-pages-en-index-tsx-6c40f821465734675e8f.js",
+      "component---src-pages-en-index-tsx-6c40f821465734675e8f.js.map"
+    ],
+    "component---src-pages-es-index-tsx": [
+      "component---src-pages-es-index-tsx-4c4b5b17f614a59efa54.js",
+      "component---src-pages-es-index-tsx-4c4b5b17f614a59efa54.js.map"
+    ],
+    "path---zh": [
+      "path---zh-b9ff957289d744a1250a.js",
+      "path---zh-b9ff957289d744a1250a.js.map"
+    ],
+    "path---en-plastic": [
+      "path---en-plastic-7aee298def58c4d82116.js",
+      "path---en-plastic-7aee298def58c4d82116.js.map"
+    ],
+    "component---src-pages-es-about-tsx": [
+      "component---src-pages-es-about-tsx-be25f3f30f5daaf79b4b.js",
+      "component---src-pages-es-about-tsx-be25f3f30f5daaf79b4b.js.map"
+    ],
+    "path---zh-plastic": [
+      "path---zh-plastic-33f08ed71ee54c9dfa33.js",
+      "path---zh-plastic-33f08ed71ee54c9dfa33.js.map"
+    ],
+    "path---index": [
+      "path---index-a0e39f21c11f6a62c5ab.js",
+      "path---index-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---es-contact": [
+      "path---es-contact-a0e39f21c11f6a62c5ab.js",
+      "path---es-contact-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "component---src-pages-en-plastic-index-tsx": [
+      "component---src-pages-en-plastic-index-tsx-2f8ca5b00b1396c5ed3f.js",
+      "component---src-pages-en-plastic-index-tsx-2f8ca5b00b1396c5ed3f.js.map"
+    ],
+    "path---zh-about": [
+      "path---zh-about-a0e39f21c11f6a62c5ab.js",
+      "path---zh-about-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---zh-contact": [
+      "path---zh-contact-a0e39f21c11f6a62c5ab.js",
+      "path---zh-contact-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---es": [
+      "path---es-b9ff957289d744a1250a.js",
+      "path---es-b9ff957289d744a1250a.js.map"
+    ],
+    "commons": [
+      "commons-ac98af262fc838706764.js",
+      "commons-ac98af262fc838706764.js.map"
+    ],
+    "component---src-pages-404-tsx": [
+      "component---src-pages-404-tsx-c3f1179ef31e3033d235.js",
+      "component---src-pages-404-tsx-c3f1179ef31e3033d235.js.map"
+    ],
+    "path---404-html": [
+      "path---404-html-a0e39f21c11f6a62c5ab.js",
+      "path---404-html-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---es-plastic": [
+      "path---es-plastic-33f08ed71ee54c9dfa33.js",
+      "path---es-plastic-33f08ed71ee54c9dfa33.js.map"
+    ],
+    "component---src-pages-zh-index-tsx": [
+      "component---src-pages-zh-index-tsx-51bcd20428b00e36e1ec.js",
+      "component---src-pages-zh-index-tsx-51bcd20428b00e36e1ec.js.map"
+    ],
+    "component---src-pages-es-plastic-index-tsx": [
+      "component---src-pages-es-plastic-index-tsx-98c85da1e6c22f4c1e31.js",
+      "component---src-pages-es-plastic-index-tsx-98c85da1e6c22f4c1e31.js.map"
+    ],
+    "component---src-pages-zh-plastic-index-tsx": [
+      "component---src-pages-zh-plastic-index-tsx-98c85da1e6c22f4c1e31.js",
+      "component---src-pages-zh-plastic-index-tsx-98c85da1e6c22f4c1e31.js.map"
+    ],
+    "component---src-pages-zh-contact-tsx": [
+      "component---src-pages-zh-contact-tsx-3ae42d63e1c62f0d775d.js",
+      "component---src-pages-zh-contact-tsx-3ae42d63e1c62f0d775d.js.map"
+    ],
+    "component---src-pages-index-tsx": [
+      "component---src-pages-index-tsx-016c93679c24391c7a7b.js",
+      "component---src-pages-index-tsx-016c93679c24391c7a7b.js.map"
+    ],
+    "app": [
+      "app-0c58ed8d15976e3628d3.js",
+      "app-0c58ed8d15976e3628d3.js.map"
+    ],
+    "component---src-pages-zh-about-tsx": [
+      "component---src-pages-zh-about-tsx-be25f3f30f5daaf79b4b.js",
+      "component---src-pages-zh-about-tsx-be25f3f30f5daaf79b4b.js.map"
+    ],
+    "path---en": [
+      "path---en-4da7118c7f59a4e824bb.js",
+      "path---en-4da7118c7f59a4e824bb.js.map"
+    ],
+    "path---404": [
+      "path---404-a0e39f21c11f6a62c5ab.js",
+      "path---404-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "component---src-pages-en-about-tsx": [
+      "component---src-pages-en-about-tsx-be25f3f30f5daaf79b4b.js",
+      "component---src-pages-en-about-tsx-be25f3f30f5daaf79b4b.js.map"
+    ],
+    "component---src-pages-es-contact-tsx": [
+      "component---src-pages-es-contact-tsx-3ae42d63e1c62f0d775d.js",
+      "component---src-pages-es-contact-tsx-3ae42d63e1c62f0d775d.js.map"
+    ],
+    "component---src-pages-en-contact-tsx": [
+      "component---src-pages-en-contact-tsx-3ae42d63e1c62f0d775d.js",
+      "component---src-pages-en-contact-tsx-3ae42d63e1c62f0d775d.js.map"
+    ]
+  }
+}
