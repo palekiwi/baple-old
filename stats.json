@@ -1,8 +1,8 @@
 {
   "assetsByChunkName": {
     "component---src-layouts-index-tsx": [
-      "component---src-layouts-index-tsx-0a256fcf6b4dfd085290.js",
-      "component---src-layouts-index-tsx-0a256fcf6b4dfd085290.js.map"
+      "component---src-layouts-index-tsx-dad0da64715304d0103e.js",
+      "component---src-layouts-index-tsx-dad0da64715304d0103e.js.map"
     ],
     "path---es-about": [
       "path---es-about-a0e39f21c11f6a62c5ab.js",
@@ -13,8 +13,8 @@
       "path---en-contact-a0e39f21c11f6a62c5ab.js.map"
     ],
     "path---": [
-      "path----770c506fe4fc931e9e04.js",
-      "path----770c506fe4fc931e9e04.js.map"
+      "path----75c46e30989d0ea10076.js",
+      "path----75c46e30989d0ea10076.js.map"
     ],
     "path---en-about": [
       "path---en-about-a0e39f21c11f6a62c5ab.js",
@@ -33,8 +33,8 @@
       "path---zh-b9ff957289d744a1250a.js.map"
     ],
     "path---en-plastic": [
-      "path---en-plastic-7aee298def58c4d82116.js",
-      "path---en-plastic-7aee298def58c4d82116.js.map"
+      "path---en-plastic-55efd257fe1bb69b58cd.js",
+      "path---en-plastic-55efd257fe1bb69b58cd.js.map"
     ],
     "component---src-pages-es-about-tsx": [
       "component---src-pages-es-about-tsx-be25f3f30f5daaf79b4b.js",
@@ -113,8 +113,8 @@
       "component---src-pages-zh-about-tsx-be25f3f30f5daaf79b4b.js.map"
     ],
     "path---en": [
-      "path---en-4da7118c7f59a4e824bb.js",
-      "path---en-4da7118c7f59a4e824bb.js.map"
+      "path---en-ff4ef79ebbc57e8a389e.js",
+      "path---en-ff4ef79ebbc57e8a389e.js.map"
     ],
     "path---404": [
       "path---404-a0e39f21c11f6a62c5ab.js",
