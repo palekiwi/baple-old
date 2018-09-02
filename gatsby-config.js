@@ -6,6 +6,7 @@ module.exports = {
       zh: 'Baple'
     },
     defLang: 'en',
+    underConstruction: true
   },
   plugins: [
     'gatsby-plugin-react-helmet',
