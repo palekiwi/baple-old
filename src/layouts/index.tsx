@@ -66,8 +66,6 @@ class Layout extends React.Component<Props, State> {
     const pref = this.props.location.pathname.substr(1,2);
     if (pref == 'en') {
       this.setState({lang: 'en'});
-    } else if (pref == 'es') {
-      this.setState({lang: 'es'});
     } else if (pref == 'zh') {
       this.setState({lang: 'zh'});
     } else {
@@ -102,6 +100,7 @@ class Layout extends React.Component<Props, State> {
 
   render () {
     const {children, data, location} = this.props;
+    console.log(this.state.lang);
     return (
       <ThemeProvider theme={theme}>
         { data.site.siteMetadata.underConstruction ?

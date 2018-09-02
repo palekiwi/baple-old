@@ -1,3 +1,3 @@
 export const isRoot = (s: string): boolean=> {
-  return ['/', '/en', '/en/', '/zh', '/zh/'].indexOf(s) > -1;
+  return ['/', '/en', '/en/', '/es', '/es/', '/zh', '/zh/'].indexOf(s) > -1;
 }

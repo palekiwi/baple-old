@@ -10,8 +10,9 @@ function parseLocale (): Lang {
   const s = window.localStorage.getItem('lang') || (() => locale())();
 
   switch (s.toLowerCase().substr(0,2)) {
+    case 'es': return 'es';
     case 'en': return 'en';
     case 'zh': return 'zh';
-    default:   return 'en';
+    default:   return 'es';
   }
 }
