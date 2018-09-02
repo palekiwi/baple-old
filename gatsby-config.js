@@ -1,5 +1,4 @@
 module.exports = {
-  pathPrefix: `/baple`,
   siteMetadata: {
     title: {
       en: 'Baple',
@@ -7,7 +6,7 @@ module.exports = {
       zh: 'Baple'
     },
     defLang: 'es',
-    underConstruction: true
+    underConstruction: false
   },
   plugins: [
     'gatsby-plugin-react-helmet',
