@@ -11,7 +11,6 @@ interface Props {
   logos: any
 }
 
-
 const messages = {
   en: 'Baple.es is coming soon!',
   es: 'Baple.es en Espanol!',

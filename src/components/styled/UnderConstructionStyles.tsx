@@ -25,8 +25,7 @@ export const Overlay = styled.div`
   left: 0;
   height: 100%;
   width: 100%;
-  background: black;
-  opacity: 0.7;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%,rgba(0,0,0,1) 100%);
 `
 
 export const Image = styled(Img)`
