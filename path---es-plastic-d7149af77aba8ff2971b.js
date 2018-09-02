@@ -1,0 +1,2 @@
+webpackJsonp([0xa2c3323baf0e],{397:function(a,t){a.exports={data:{site:{siteMetadata:{defLang:"es"}},plasticYaml:{sections:null}},pathContext:{}}}});
+//# sourceMappingURL=path---es-plastic-d7149af77aba8ff2971b.js.map
