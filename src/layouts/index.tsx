@@ -68,6 +68,8 @@ class Layout extends React.Component<Props, State> {
       this.setState({lang: 'en'});
     } else if (pref == 'zh') {
       this.setState({lang: 'zh'});
+    } else if (pref == 'es') {
+      this.setState({lang: 'es'});
     } else {
       this.setState({lang: locale.getLocale()});
     }
@@ -159,7 +161,7 @@ export const query = graphql`
       }
     }
     background: imageSharp(id: {regex: "/welcome.jpg/"}) {
-      sizes(maxWidth: 1920, quality: 100) {
+      sizes(maxWidth: 1920, quality: 50) {
         ...GatsbyImageSharpSizes
       }
     }
